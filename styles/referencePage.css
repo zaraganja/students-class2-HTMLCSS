@@ -1,0 +1,21 @@
+blockquote:hover{
+    cursor: pointer;
+}
+
+blockquote::after{
+    /* content: "hello"; */
+     content: attr(cite); 
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    width: fit-content;
+    padding-inline: 10px;
+    border-radius: 10px;
+}
+
+blockquote:hover::after{
+    display: flex;
+}
+
+button{
+    display: none;
+}
