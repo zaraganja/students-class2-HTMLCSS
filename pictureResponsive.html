@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 200vh;
+            width: 100vw;
+            background-color: plum;
+        }
+        .images{
+            object-fit: scale-down;
+
+        }
+        h2{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>chat with me</h2>
+    <!-- می توانید با تغییر سایز اسکرین ها عکستان را هم عوض کنید  -->
+    <picture>
+        <source class="images"  media="(min-width:650px)" srcset="src/images/gold.jpg">
+        <source class="images" media="(min-width:465px)" srcset="src/images/trelloLogo.jpg" >
+        <!-- required یعنی اگر نباشد اجرا نمیشود -->
+        <img src="" alt="" width="100%" height="200">
+    </picture>
+
+    <p>صفحه براوزر را تغییر دهید </p>
+</body>
+</html>

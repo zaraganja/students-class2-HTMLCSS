@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back image</title>
+    <style>
+        .div1{
+            width: 1000px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            justify-content:space-between ;
+            align-items: center;
+            background-color: aquamarine;
+        }
+        .containers{
+            background-color: bisque;
+            width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .backImage{
+            background-image: url("src/images/gold.jpg");
+            width: 400px;
+            height: 300px;
+            background-size:contain; 
+            /* auto: سایز اصلی عکس رو نشون میده حتی اگه عکس درست نشون نده و حالت دیفالت  */
+            /* cover: مهم نیست عکس کات بشه یا کشیده بشه مهم اینه که تو اون سایزی که پرنتش داره جا بشه  */
+            /* contain: عکس رو سایزش رو عوض میکنه و مطمین میشه کهع کل عکس دیده بشه ; */
+
+        }
+        .image{
+            width: 300px;
+            height: 400px;
+            object-fit:cover;
+            /* fill دیفالت هست عگس رو فیت میکنه به  محتوای باکس
+            contain aspect ratio عکس رو حفظ  */
+            /* cover : حتی اگه عکس کات بشه بازم باید فیت بشه  */
+            /* none  ریسایز انجام نده  */
+            /* scale-down سایز عکس رو کوچکتر میکنه  */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="containers">
+            <h1>background Image</h1>
+            <img src="" alt="">
+            <div class="backImage">
+             
+            </div>
+        </div>
+        <div class="containers">
+            <h1>Image inside div</h1>
+            <img src="src/images/gold.jpg" alt="gold image" class="image"  >
+        </div>
+
+    </div>
+</body>
+</html>
