@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positio example</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 300vh;
+            background-color: rgb(240, 233, 235);
+            overflow-x: hidden;
+        }
+        .container{
+            width: 300px;
+            height: 200px;
+            border-width: 1px;
+            border-style:solid;
+            border-color: black;
+            position: relative;
+            /* border: 1px solid black; */
+        }
+        .absolute-box{
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position:absolute;
+            top:200px;
+            right: 0px;
+        }
+        .fixed-box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position:fixed;
+            top: 20px;
+            right: 50px
+        }
+        .sticky-box{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            position:sticky;
+            top: 20px;
+            right: 50px;
+        }
+    </style>
+   
+</head>
+<body>
+    <section class="container">
+        <div class="absolute-box"></div>
+        <div class="fixed-box"></div>
+        <div class="sticky-box"></div>
+        <p>Lorem ipsum dolor sit amet,<span style=" color: red; text-decoration:line-through;" >old price: 2000000 $ </span> elit. Amet, aut similique a laboriosam qui autem aliquid quisquam, doloremque, placeat quam hic rem minus harum esse sequi ad animi ullam quis!</p>
+    </section>
+</body>
+</html>

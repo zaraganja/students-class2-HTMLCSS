@@ -1,0 +1,30 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    background-color: bisque;
+}
+.rowDiv{
+    display: flex;
+    flex-direction: row;
+    width: 30rem;
+    height: 30rem;
+    background-color: pink;
+    justify-content:space-between; 
+     padding-left: 4%;
+     padding-right: 4%;
+    align-items:center;
+    /* gap: 10%; */
+}
+.colDiv{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+    background-color: blueviolet;
+    margin-left: 2%;
+     justify-content: center; 
+    align-items: center;
+    gap: 10%;
+}
