@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text styles</title>
+    <style>
+   
+     /* body > p {
+        color: purple;
+     } */
+    
+     p:first-child{
+        color: rgb(187, 220, 21);
+        text-decoration:overline;
+        letter-spacing: 3px;
+        font-size:x-small;
+        font-weight: bold;
+     }
+          /* پی ای که دومین فرزند والدش باشه 2 */
+          p:nth-child(2){
+        color: red;  
+        letter-spacing: 4px;
+        text-decoration: underline;
+        font-size: xx-large;
+        font-weight:bolder;
+
+
+     }
+     p:last-of-type{
+        color: green;
+     }
+     div {
+        width: 150px;
+        border: 1px solid #000;
+
+     }
+     .blogDescription{
+        word-wrap: normal;
+     }
+     .productDescription{
+        word-wrap: break-word;
+     }
+
+    </style>
+</head>
+<body>
+    <p>this is my sample text which I want to explain </p>
+    <p>این یک متن نمونه فارسی است متن نمونه</p>
+    <p>این متن آخر من است متن نمونه ی آخر</p>
+    <!-- <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci et, asperiores maiores tempora libero placeat itaque pariatur sint eius eaque inventore eligendi nesciunt magnam dolores temporibus assumenda quaerat nemo debitis.</h1> -->
+  
+
+
+    <h1>word-wrap property</h1>
+    <h2>word-wrap:normal</h2>
+    <div class="blogDescription">
+        this div contains a long word:bjhbcısbc njnbsonfnsn knknfv long long words paranvkdsnjoknbjhbcısbc njnbsonfnsn knknfv long long words paranvkdsnjokn
+    </div>
+
+    <h2>word-wrap: break - word </h2>
+    <div class="productDescription">
+        this div contains a long word:bjhbcısbc njnbsonfnsn knknfv long long words paranvkdsnjoknbjhbcısbc njnbsonfnsn knknfv long long words paranvkdsnjokn
+    </div>
+</body>
+</html>

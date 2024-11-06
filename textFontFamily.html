@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <title>sample font</title>
+    <style>
+        p{
+            /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+            /* font-family: "Noto Kufi Arabic",sans-serif; */
+        }
+        @font-face{
+            font-family: 'Doran-Regular';
+            /* ttf => format(truetype)
+            oft => format(opentype) */
+            src: url("/src/fonts/Doran-Regular.woff") format("woff"),
+            url("/src/fonts/Doran-Regular.woff2") format("woff2");
+        }
+        body{
+            font-family:'Doran-Regular',sans-serif ;
+        }
+    </style>
+</head>
+<body>
+    <p> سلام من فونت کوفی دارم</p>
+    <h4>من فونت ندارم</h4>
+    <h3>من فونت دوران دارم</h3>
+</body>
+</html>

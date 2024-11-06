@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav header</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 350vh;
+            background-color: bisque;
+        }
+        ul{
+            list-style:none;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            
+        }
+        #sampleProduct{
+            width: 100%;
+            height: 5%;
+            margin-top: 50%;
+            background-color: aquamarine;
+        }
+        #contactUs{
+            width: 100%;
+            height: 5%;
+            margin-top: 40%;
+            background-color: red;
+        }
+        footer{
+            width: 100vw;
+            height: 10%;
+            background-color: plum;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#sampleProduct">محصول نمونه</a></li>
+        <li><a href="#contactUs">ارتباط با ما</a></li>
+        <li><a href="#myimg">عکس نمونه</a></li>
+        <li><a href="#myfooter">ادرس شرکت</a></li>
+    </ul>
+
+    <section id="sampleProduct">
+        <h1>محصول نمونه</h1>
+    </section>
+    <section id="contactUs">
+        <h1>ارتباط با ما</h1>
+    </section>
+
+    <img id="myimg" src="/src/images/gold.jpg" alt="gold" width="500" height="500">
+    <footer id="myfooter">
+        <address>
+            ادرس شرکت <br>
+            خیابان دانشکده
+        </address>
+    </footer>
+</body>
+</html>
