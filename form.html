@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            padding-block: 10px;
+            direction: rtl;
+        }
+        form{
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <label for="fname">نام</label>
+        <input type="text" id="fname" name="fname" placeholder="نام" required >
+        <!-- برای مشخص کردن پسورد امن و تعداد کاراکترهاش از regexp  -->
+        <input type="password" id="pass" name="pass" required >
+        <input type="radio" id="myradioBtn"  >
+        <input type="email" placeholder="mail" required >
+        <input type="number" min="1" max="11" step="2" placeholder="تعداد محصول">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form >
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Safari">
+             <option value="Firefox">
+             <option value="Chrome">
+             <option value="Opera">
+        </datalist>
+    </form>
+</body>
+</html>
