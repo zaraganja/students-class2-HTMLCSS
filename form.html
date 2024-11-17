@@ -28,25 +28,64 @@
     </style>
 </head>
 <body>
-    <form >
+    <!-- <form >
         <label for="fname">نام</label>
-        <input type="text" id="fname" name="fname" placeholder="نام" required >
+        <input type="text" id="fname" name="fname" placeholder="نام" required > -->
         <!-- برای مشخص کردن پسورد امن و تعداد کاراکترهاش از regexp  -->
-        <input type="password" id="pass" name="pass" required >
+        <!-- <input type="password" id="pass" name="pass" required >
         <input type="radio" id="myradioBtn"  >
         <input type="email" placeholder="mail" required >
         <input type="number" min="1" max="11" step="2" placeholder="تعداد محصول">
         <input type="submit" value="Submit">
-    </form>
+    </form> -->
 
-    <form >
+    <!-- <form >
         <input list="browsers">
         <datalist id="browsers">
             <option value="Safari">
-             <option value="Firefox">
+           <option value="Firefox">
              <option value="Chrome">
              <option value="Opera">
         </datalist>
+    </form> -->
+
+    <!-- <form action="">
+        <input type="radio" id="html" name="fav_lang" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" name="fav_lang" id="css" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_lang" value="javascript" >
+        <label for="javascript">javascript</label>
+    </form> -->
+
+    <!-- <form action="/submit-form.php" method="post">
+        <input type="checkbox" id="veh1" name="veh1" value="veh1">
+        <label for="veh1">veh1</label>
+        <input type="checkbox" id="veh2" name="veh2" value="vah2">
+        <label for="veh2">veh2</label>
+        <input type="submit">
+    </form> -->
+
+    <form onsubmit="">
+        <label for="file">upload file:</label>
+        <input type="file" name="file" id="file"><br><br>
+
+        <label for="range">Range</label>
+        <input type="range" id="range" name="range" min="0" max="70" ><br><br>
+
+        <!-- <label for="phone">Phone number</label> -->
+        <input type="tel" id="phone" name="phone" placeholder="شماره تلفن خود را وارد کنید"  ><br><br>
+
+        <label for="search" >search</label>
+        <input type="search" name="search" id="search" autofocus ><br><br>
+
+        <label for="url">Website</label>
+        <input type="url" name="url" id="url">
+        <input type="email" id="email" disabled placeholder="ipsum@gmail.com">
+        <input type="submit" value="ثبت"><br>
+
+       <input type="reset" value="انصراف">
     </form>
+ 
 </body>
 </html>

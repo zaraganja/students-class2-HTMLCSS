@@ -27,7 +27,7 @@
             background-color: green;
            }
         }
-
+        /* تعریف انیمیشن  */
     @keyframes anim3 {
         0% {
             background-color: red;
@@ -50,23 +50,65 @@
             top: 0px;
            }
     }
-    div {
+    .divOut {
         width: 100px;
         height: 100px;
         background-color: rebeccapurple;
-        animation-name: anim2;
+        animation-name: anim3;
+        /* مدت زمان اجرای انیمیشن  */
         animation-duration: 5s;
-        animation-delay: 2s;
+
+        /* قبل از اجرای انیمیشن تاخیر رو میدید  */
+        animation-delay: 1s;
+
+        /* تعداد اجرای انیمیشن  */
+        animation-iteration-count:infinite;
+
+        /* جهت اجرای انیمیشن  */
+        animation-direction:normal;
+        /* reverse : برعکس از آخر به اول انیمیشن را اجرا میکند  */
+        /* alternate: ابتدا از اول به آخر اجرا میکند و سپس از آخر به اول  */
+        /* alternate-reverse : ابتدا از آخر به اول اجرا میکند و سپس از اول به آخر  */
+
     }
+    .secondDivs{
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        font-weight: bold;
+        position: relative;
+        /* نکته  */
+        /* animation-name و animation-duration مکمل هم هستند یکی باشه دیگری نباشه اجرا نمیشه  */
+        animation-name: mymove;
+        animation-duration: 3s;
+        margin-top: 3px;
+        animation-iteration-count: infinite;
+    }
+    /* برای تعریف انیمیشن  */
+    @keyframes mymove {
+        from{
+            left: 0px;
+        }
+        to {
+            left: 300px;
+        }
+    }
+    /* animation-timing-function سرعت اجرای انیمیشن رو مشخص میکنه   */
+    #div1 {animation-timing-function:linear}
+    #div2 {}
+    #div3 {}
+    #div4 {}
+    #div5 {}
+
     </style>
 </head>
 <body>
-    <div></div>
-    <!-- <div id="div1" class="secondDivs">linear</div>
+    <!-- <div class="divOut"></div> -->
+    <div id="div1" class="secondDivs">linear</div>
     <div id="div2" class="secondDivs">ease</div>
     <div id="div3" class="secondDivs">ease-in</div>
     <div id="div4" class="secondDivs">ease-out</div>
-    <div id="div5" class="secondDivs">ease-in-out</div> -->
+    <div id="div5" class="secondDivs">ease-in-out</div> 
 
 </body>
 </html>
