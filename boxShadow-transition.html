@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow</title>
+    <style>
+        div{
+            /* box-shadow: none| h-offset v-offset blur spread color |inset; */
+            /* box-shadow: none;  */
+            /* or  */
+            /* h-offset : required : horizental  */
+            /* اگر مثبت باشه سایه میوفته سمت راست */
+            /* اگه منفی باشه سایه میوفته سمت چپ  */
+
+            /* v-offset : required- vertical  */
+            /* اگه مقدار مثبت باشه پایین  */
+            /* و اگر منفی باشه بالا  */
+
+            /* blur : optional 
+            یک عددیه که هرچقدر بیشتر باشه میزان بلورش بیشتر میشه  */
+
+            /* spread :optional 
+            مقدار مثبت سایز سایه رو میبره بالا
+            و مقدار منفی سایز سایه رو میاره پایین  */
+
+            /* color رنگ سایه  */
+            /* inset : optional  */
+            /* سایه رو به سمت داخل المنت اجرا میکند  */
+            width: 15rem;
+            height: 10rem;
+            border: 2px solid #f42b2b;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: bisque;
+            box-shadow: -10px 10px 20px 10px #11a171 inset;
+
+            transition: background-color 0.5s ease;
+            transition: border 1s ease-in;
+            /* برای دکمه ها معمولا کاربرد دارد  */
+            /* یک پراپرتی رو پر طول گذشت زمان تغییر میده  */
+            /* ease : شروع اهسته و سپس در میانه راه افزایش سرعت و بعد اهسته میشه  */
+            /* ease-in:به آرامی شروع میشه و بعد سرعتش میره بالا  */
+            /* ease-in-out: شروع اهستهه سپس افزایش سرعت و در انتها کم شدن سرعت  */
+            /* ease-out: به سرعت شروع میشه و بعد آهسته میشه  */
+
+        }
+         div:hover{
+            background-color: blueviolet;
+            cursor: pointer;
+            border: 10px solid #2bf435;
+        } 
+    </style>
+</head>
+<body>
+    <div>I have shadow</div>
+</body>
+</html>

@@ -95,11 +95,30 @@
     }
     /* animation-timing-function سرعت اجرای انیمیشن رو مشخص میکنه   */
     #div1 {animation-timing-function:linear}
-    #div2 {}
-    #div3 {}
-    #div4 {}
-    #div5 {}
+    /* با سرعت ثابتی از اول به آخر انیمیشن را اجرا میکند  */
+    #div2 {animation-timing-function: ease;}
+    /* حالت دیفالت هسا که شروع آرام و سپس سریع و در آخر آرام به پایان میرسد  */
+    #div3 {animation-timing-function: ease-in;}
+    /* شروع آهسته ی انیمیشن  */
+    #div4 {animation-timing-function: ease-out;}
+    /* به صورت آهسته به پایان میرسه  */
+    #div5 {animation-timing-function: ease-in-out;}
+    /* شروع آهسته  */
+
+
+    p{
+        animation-name: example;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* در یک خط می توان نوشت  */
+        animation: example 5s linear 2s infinite alternate;
+    }
     </style>
+
+   
 </head>
 <body>
     <!-- <div class="divOut"></div> -->
