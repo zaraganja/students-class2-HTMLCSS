@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tra trasn scale imp</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: transform 1.5 ease ;
+        }
+        .box:hover {
+            cursor: pointer;
+            /* تغییر مکان  */
+            transform:translateX(50px);
+            /* درصد زوم  */
+            scale: 1.5;
+            background-color: red !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const showValue=()=>{
+            const v= document.getElementById("myrange").value;
+            document.getElementById("myRangeValue").innerText=v+"%";
+        }
+    </script>
+</head>
+<body>
+    <form >
+        <input type="range" id="myrange" min="1" max="100" onchange="showValue()"  >
+        <label id="myRangeValue" ></label>
+    </form>
+</body>
+</html>

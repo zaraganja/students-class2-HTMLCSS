@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border: 2px solid #000;
+        }
+
+    </style>
+    <script>
+        // تعریف تابع جاوا اسکریپتی 
+        const getComment=()=>{
+            const cmnt=document.getElementById("comment");
+            cmnt.contentEditable="false";
+            const mycomment=cmnt.innerText;
+            alert(mycomment)
+        }
+       
+    </script>
+</head>
+<body>
+    <p contenteditable="true" id="comment" >this is editable p</p>
+    <button onclick="getComment()" > save coment</button>
+</body>
+</html>

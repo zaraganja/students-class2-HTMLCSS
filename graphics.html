@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graphics</title>
+    <style>
+        body{
+            height: 2000px;
+            justify-content: center;
+            align-items: center;
+        }
+        .width{
+            display: flex;
+            position: absolute;
+            top: 30%;
+            left: 15%;
+        }
+        canvas{
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+        .height{
+            position: absolute;
+            display: flex;
+            top: 20%;
+            left: 6%;
+        }
+    </style>
+</head>
+<body>
+    <!-- id - width and height are required  -->
+    <canvas id="canvasLine" width="200" height="100" style="border: 1px dashed #000;" ></canvas>
+    <h3 class="width">200px</h3>
+    <h3 class="height" >100px</h3>
+    <script>
+        var c= document.getElementById("canvasLine");
+        var ctx= c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,50);
+        ctx.stroke();
+    </script>
+
+    
+</body>
+</html>
