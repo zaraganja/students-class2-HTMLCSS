@@ -30,17 +30,83 @@
 </head>
 <body>
     <!-- id - width and height are required  -->
-    <canvas id="canvasLine" width="200" height="100" style="border: 1px dashed #000;" ></canvas>
+    <canvas id="canvasLine" width="200" height="100"  style="border: 1px dashed #000;" ></canvas>
     <h3 class="width">200px</h3>
     <h3 class="height" >100px</h3>
     <script>
         var c= document.getElementById("canvasLine");
         var ctx= c.getContext("2d");
         ctx.moveTo(0,0);
-        ctx.lineTo(200,50);
+        ctx.lineTo(200,70);
         ctx.stroke();
     </script>
 
+    <canvas id="canvasCircle" width="200" height="100" style="border: 2px dotted #d31b1b;" ></canvas>
+    <script>
+        var c=document.getElementById("canvasCircle");
+        var ctx= c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(150,55,30,4,2*Math.PI);
+        // arc یعنی کمان قوس حلال 
+        // arc(x,y,radius,startAngle,endAngle)
+        // x y مرکز دابره فرضی برای حلال 
+        // radius شعاع یا همون بزرگی دایره 
+        // startAngle زاویه شروع دایره از سمت مرکز در روی محور ایکس 
+        // که واحدش رادیان هست 
+        // یک رادیان کمی بزرگتر از چهل و پنج درجه است 
+        // endAngle زاویه پایانی قوس به رادیان 
+        ctx.stroke();
+    </script>
+
+    <canvas id="textCanvas" width="200" height="100" style="border: 2px dotted #23d4b4;" ></canvas>
+    <script>
+        var c= document.getElementById("textCanvas");
+        var ctx= c.getContext("2d");
+        ctx.font= "30px Arial";
+        ctx.fillStyle="red";
+        ctx.strokeStyle="red";
+        ctx.strokeText("Hello Canvas",10,40);
+        // ctx.strokeText("Hello Canvas",x,y)
+        
+    </script>
+
+    <hr>
+    <div style="height: 100%; width: 50%; display: flex; flex-direction:column; background-color: burlywood; " >
+        <h1>linearGradient</h1>
+        <canvas id="linearGradient" width="200" height="100" style="border: 2px dotted #23d43b; background-color: aqua;" ></canvas>
+        <script>
+            var c=document.getElementById("linearGradient");
+            var ctx= c.getContext("2d");
+            var grd= ctx.createLinearGradient(0,100,200,100);
+            // var grd= ctx.createLinearGradient(x0,y0,x1,y1);
+
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"blue");
+            ctx.fillStyle=grd;
+             ctx.fillRect(4,5,100,50);
+            // ctx.fillRect(0,0,200,100);
+            // ctx.fillRect(x,y,width,height);
+        </script>
+    </div>
+
+    <div style="height: 100%; width: 50%; display: flex; flex-direction: column; background-color:#d31b1b66;">
+        <h1>circular Gradient</h1>
+        <canvas id="circularGradient" width="200" height="100" style="border: 2px dotted #000000;" ></canvas>
+        <script>
+            var c=document.getElementById("circularGradient");
+            var ctx= c.getContext("2d");
+             var grd= ctx.createRadialGradient(70,70,30,70,60,100)
+            // var grd= ctx.createRadialGradient(x0,y0,r0,x1,y1,r1)
+            // x0 , y0 مختصات مرکز دایره اول
+            // r0 شعاع دایره اول 
+            // x1 ,y1 مختصات دایره دوم 
+            // r1 شعاع دایره دوم 
+            grd.addColorStop(0,"red");
+            grd.addColorStop(1,"yellow");
+            ctx.fillStyle=grd;
+            ctx.fillRect(10,10,160,80);
+        </script>
+    </div>
     
 </body>
 </html>
