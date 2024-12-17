@@ -28,7 +28,28 @@
 3.6 input:checked - برای اینپوت های از نوع چک باکس
 3.7 input:disabled - اتریبیوت دیس ایبل داره
 3.8 input:enabled - === نداره مثال
-3.9 :empty - p:empty ***************
+3.9 :empty - p:empty - <p></p> ok but (<p> </p> wrong - <p><span></span></p> wrong)
 3.10 :fist-of-type p:first-of-type -اون پی ای رو انتخاب میکنه که اولین پی از فرزند ها باشه
 مهم نیست قبلش چه النتهایی غیر از پی وجود داشته باشه مهم اینه که از بالا به پایین اولین پی ای که میبینه رو انخاب میکنه
 3.11 :focus - input:focus  کلیک در داخل اینپوت 
+3.12 :in-range - input:in-range 
+3.13 :invalid - input:invalid - 
+3.14 :valid - input:valid -
+3.15 :optional - input:optional --> اون اینپوتی که required نیست
+3.16 :out-of-range - input:out-of-range 
+3.17 :read-only - input:read-only - readonly attr
+3.18 :read-write - input:read-write - doesnt have readoly and disabled attr
+3.19 :required - input:required- input has required attribute
+3.20 :last-child - p:last-child - پی ای که آخرین فرزند والدش باشه
+3.21 :last-of-type - h2:last-of-type -آخرین نوع از المنت h1
+3.22 :not(elemnet) - :not(p) - اونهایی که پی نیستن رو انتخاب کن
+    به علت اینکه استایل این سلکتور به صورت آبشاری به المنتهای دیگه تاثیرذ میذاره 
+    این سلکتور به تنهایی اعمال نمیشه و در واقع استایل داخلش رو همه المنها به ارث 
+3.23 :nth-child(n) - h2:nth-child(2) - شماره فرزند را میتوانید بدهید 
+3.24 :nth-last-child(n) - p:nth-last-child(2) - از آخر دومین پی رو انتخاب میکنه
+3.25 :nth-last-of-type(n) - p:nth-last-of-type(2) => پی ای که از آخر دومین پی باشه مهم نیست دومین فرزند 
+باشه یا نه  مهم نوع پی بودنشه 
+3.26 :nth-of-type(n) - p:nth-of-type(2) -پی ای که از بالا دومین پی باشه دقت کنید دومین پی نه دومین فرزند
+3.27 :only-of-type - p:only-of-type = پی ای که تنها پی از والدش هست و در داخل این واید 
+بیشتر از یک عدد پی وجود ندارد
+3.28 :only-child  - p:only-child -***
