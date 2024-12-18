@@ -9,7 +9,7 @@
             width: 100vw;
             height: 100vh;
             display: flex;
-            background-color: rgb(246, 133, 21);
+            background-color: rgb(248, 242, 236);
             flex-direction: column;
         }
         /* #header{
@@ -136,13 +136,84 @@
         /* p:nth-of-type(3){
             color: chartreuse;
         } */
-        h3:only-of-type{
+        /* h3:only-of-type{
             color: chartreuse;
+        } */
+        /* h2:only-child{
+            color: violet;
         }
-        
+        #news1:target{
+            border: 2px solid #000;
+            background-color: rgba(229, 221, 221, 0.895);
+            color: bisque;
+            height: 200px;
+        } */
+        /* #news2:target{
+            color: red;
+        }
+        section::after{
+            content: "hi section";
+        }
+        section{
+            background-color: rebeccapurple;
+        } */
+        /* p::first-letter{ */
+            /* font-weight:500; */
+            /* color: red;
+        } */
+        /* p::first-line{
+            font-weight: 900;
+            text-decoration: underline;
+        }
+        ::marker{
+            color: rgba(255, 0, 0, 0.618);
+        }
+        p::selection{
+            background-color: rgba(255, 0, 0, 0.469);
+        } */
+        /* a[target]{
+            background-color: aqua;
+            color: red;
+        } */
+        /* a[target="_blank"]{
+            color: blue;
+            text-decoration: none;
+        } */
+        [title~="flower"]{
+            border: 3px solid #000;
+        }
+        [class |= "describe"]{
+            background-color: yellow;
+        }
     </style>
 </head>
 <body>
+<section>
+    <h1 class="describe-header">اول</h1>
+    <h1 class="describe">دوم</h1>
+    <p class="describe-text">سوم </p>
+    <p class="describecontent">چهارم</p>
+</section>
+
+
+<br><br>
+    <img src="/src/images/gold.jpg" alt="gold" title="golden flower" width="50" height="50">
+    <img src="/src/images/trelloLogo.jpg" alt="trello" title="flower" width="50" height="50" >
+    <img src="/src/svg/singer.svg" alt="singer" title="singer" height="50" width="50">
+
+    <br><br>
+    <ol type="i">
+        <li>Coffee</li>
+        <li>Matcha</li>
+        <li>Milk</li>
+    </ol>
+    <p><a href="#news1" target="_blank">لینک محتوای اول</a></p>
+    <p><a href="#news2" target="_top">لینک محتوای دوم</a></p>
+    
+    <p id="news1">محتوای اول</p>
+    <p id="news2" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ut reiciendis eum aut, ducimus sequi provident assumenda delectus perferendis quaerat, perspiciatis repellendus sit ipsam dolores quam inventore corporis illo numquam.</p>
+
+    <hr><br>
     <h2>عنوان سایت</h2>
     <h2>درباره شرکت</h2>
     <!-- <p>اولین پاراگراف</p>
@@ -174,7 +245,13 @@
         <li>2</li>
     </ul>
     <p>test my third par</p>
+    <section>
+        <h2>ورود،ثبت نام</h2>
+    </section>
 
+    <div>
+        <h2>عضویت درخبرنامه</h2>
+    </div>
 
     <!-- <a href="index.html" target="_blank"></a> -->
     <!-- <p>

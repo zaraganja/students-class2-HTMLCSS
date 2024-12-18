@@ -1,8 +1,8 @@
 1.simple selectore: تا الان باهاشون کار کردیم
 2.combinator selectore المنتهارو بر اساس ارتباط بین انها انتخاب میکند 
 3. Pseudo-class selectores المنتها را بر اساس حالت خاصی از انها انتخاب میکند
-
-
+4.Pseudo-elements selectores -یک قسمتی از المنت رو میگیرند و استایل دهی انجام میدن 
+5.Attribute selectores - المنتهارو بر اساس اتریبیوت های آنها انتخاب میکنند
 
 
 
@@ -41,7 +41,7 @@
 3.18 :read-write - input:read-write - doesnt have readoly and disabled attr
 3.19 :required - input:required- input has required attribute
 3.20 :last-child - p:last-child - پی ای که آخرین فرزند والدش باشه
-3.21 :last-of-type - h2:last-of-type -آخرین نوع از المنت h1
+3.21 :last-of-type - h2:last-of-type -آخرین نوع از المنت h2
 3.22 :not(elemnet) - :not(p) - اونهایی که پی نیستن رو انتخاب کن
     به علت اینکه استایل این سلکتور به صورت آبشاری به المنتهای دیگه تاثیرذ میذاره 
     این سلکتور به تنهایی اعمال نمیشه و در واقع استایل داخلش رو همه المنها به ارث 
@@ -52,4 +52,27 @@
 3.26 :nth-of-type(n) - p:nth-of-type(2) -پی ای که از بالا دومین پی باشه دقت کنید دومین پی نه دومین فرزند
 3.27 :only-of-type - p:only-of-type = پی ای که تنها پی از والدش هست و در داخل این واید 
 بیشتر از یک عدد پی وجود ندارد
-3.28 :only-child  - p:only-child -***
+3.28 :only-child  - p:only-child - اون پی ای که تنها فرزن عه والدش باشه
+3.29 :root - روت عه کل داکی.منت رو میگیره rootHtmlBody.html
+3.30 :target - #news:target - وقتی میری روی آی دی news
+این استایل رو بگیر 
+
+4.Pseudo-elements selectores :
+
+4.1 ::after - refrencePage.html 
+4.2 ::before - refrencePage.html 
+4.3 ::first-letter - p::first-letter - اولین حرف از هر پی میگیره و بهش استایل میده 
+4.4 ::first-line - p:fist-line - اولین خط از پی رو انتخاب میکنه 
+4.5 ::marker - مارکر های لیست ها ul ol 
+4.6 ::selection - اون قسمتی که کاربر درگ میکنه و سلکت میکنه رو میگیره و بهش استایل میده
+
+5. Attribute selectores
+
+5.1 element[attribute] -  a[target] همه ی انکر هایی که تارگت دارن
+5.2 element[attribute="value"] - a[target="_blank"]
+5.3 (element)[attribute~="value] - [title~="flower"]-مثال 
+5.4 (element)[attribute |= "value"] - [class|= "describe"] -اون تگ اتریبیوتش مساوی با مقدار ولیو باشه و یا با هایفون جدا بهش
+رو امنتخاب میکنه =به مثال مراجعه کنید
+-  => هایفن hyphone ***********
+
+5.5

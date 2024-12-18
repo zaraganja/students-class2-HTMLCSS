@@ -14,7 +14,7 @@ blockquote::after{
 
 blockquote:hover::after{
     display: flex;
-}
+} 
 
 button{
     display: none;
