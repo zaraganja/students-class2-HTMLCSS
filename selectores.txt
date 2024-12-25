@@ -70,9 +70,14 @@
 
 5.1 element[attribute] -  a[target] همه ی انکر هایی که تارگت دارن
 5.2 element[attribute="value"] - a[target="_blank"]
-5.3 (element)[attribute~="value] - [title~="flower"]-مثال 
+5.3 (element)[attribute~="value] - [title~="flower"]-مثال شامل این مقدار باشن
 5.4 (element)[attribute |= "value"] - [class|= "describe"] -اون تگ اتریبیوتش مساوی با مقدار ولیو باشه و یا با هایفون جدا بهش
 رو امنتخاب میکنه =به مثال مراجعه کنید
 -  => هایفن hyphone ***********
 
-5.5
+5.5 (element)[attribute^="value] - [class^="top"] المنتهایی که با مقدار تاپ شروع شده اند
+5.6 (element)[attribute$="value] - [class$="test"] - المنتهایی که اسم کلاسش با تست به پایان رسیده
+5.7 [attribute*="value"] - [class*="te"] - المنتهایی که اسم کلاسشون شامل حرف تی ای باشه
+
+5.8 forms 
+input[type="text"] - input[type="number"] - input[type="email"]
