@@ -128,16 +128,212 @@ const checkSyntax=(i)=>{
 
 // تابع با ورودی 
 // اگر تابع ورودی داشته باشد حتما باید هنگام فراخوانی ورودی اش را بدهید سمت اچ تی ام 
-const getName=(name)=>{
-console.log(name);
+const getName=(id)=>{
+console.log(id);
 }
 
-//  x ??=y (Nullish assignment) 
+//  x ??=y (Nullish assignment) x ??=y =>means:  x = y if x =null or x= undefiend
 // وای رو داخل ایکس قرار میده اگه ایکس 
 // (null یا undefined)=> Nullish
 // باشه 
 
+const checkNullishAs=()=>{
+    let x;
+    console.log(x);
+    let y= 10;
+    x ??=y 
+    console.log(x);
+}
+
+
+const DataTypes=()=>{
+
+    //Numbers
+    let l= 16
+    let w=7.6
+
+    //Strings
+    let color="16";
+    let name="Nilufar";
+
+    //Booleans
+    let x= true;
+    let y=false;
+
+    //object
+    const person={fistname:"Zohre",lastname:"akbari",age:"20"};
+
+    //Array 
+    const colors=["red","green","blue"]
+    const myArray=["name",19,{name:"zohre"}]
+
+    //Date 
+    const date= new Date("2025-1-25");
+}
+
+const testObjects =()=>{
+    //ایجاد آبجکت
+    //object
+    const person ={
+        firstname:"Nilufar",
+        lastname:"delkeshan",
+        age:20,
+        eyecolor:"brown"
+    }
+
+    //ایجاد ابجکت به روش دوم
+    // const person1={}
+    // person1={
+    // }
+
+      //ایجاد ابجکت به روش سوم
+      const person2= new Object();
+      //add properties
+      person2.firstname="mehdi";
+      person2.lastname="ebrahimi";
+      person2.age=20;
+      
+    //  console.log(person2.lastname);
+    document.getElementById("emptySpace").innerText=person2.lastname;
+
+    // console.log(person2["lastname"])
+    // console.log(person2);
+    // delete person2.age;
+    // or 
+    delete person2["age"];
+    // console.log(person2);
+      
+    //nested objects آبجکت تو در تو
+    const myObject={
+        name:"sheida",
+        age:20,
+        favColors:{
+            color1:"green",
+            color2:"blue",
+            color3:"brown"
+        }
+    }
+
+    console.log(myObject);
+    console.log(myObject.favColors.color1);
+    console.log(myObject["age"]);
+    console.log(myObject["favColors"]["color3"]);
+
+}
+
+const functionObject=()=>{
+    const person={
+        firstname:"zohre",
+        lastname:"akbari",
+        id:5554,
+        fullname: function(){
+            return(this.firstname +""+ this.lastname + ""+ this.id)
+        }
+    }
+    // console.log(person.fullname());
+    document.getElementById("emptySpace").innerText=person.fullname();
+
+    // نمایش تک تک اجزای یک آبجکت 
+    // for (let x in person){
+    //     console.log(person[x]);
+    // }
+
+    const person22 ={
+        firstname:"Nilufar",
+        lastname:"delkeshan",
+        age:20,
+        eyecolor:"brown"
+    }
+
+    // حلقه برای آبجکت ها 
+    for(let y in person22){
+        console.log(person22[y])
+    }
+
+}
+
+ //آرایه ها 
+ const ArraySample =()=>{
+    const myArr1= [
+        "item1", //0
+        "33", //1
+        3444, //2
+        "sheida" //3
+    ]
+
+    // json data 
+    const DataFromServer=[
+        {id:1,name:"product1"},
+        {id:2,name:"product2"},
+        {id:3,name:"product3"}
+    ]
+
+    // console.log(myArr1[3]);
+    // console.log(DataFromServer)
+
+    //ایجاد آرایه به روش دوم
+    // const myArray= new Array()
+
+    const person33={
+        neme:"Melorin",
+        age:4,
+        city:"urmia"
+    }
+    // تبدیل آبجکت به آرایه
+    const newArr= Object.values(person33);
+    console.log(person33);
+    console.log(newArr);
+
+    //برای فقط ارایه های اگر بخ.اهیم اندازه ی یک آرایه رو بگیریم
+    console.log(newArr.length) //3
+
+    // برای آبجکت ها معنی نداره 
+    console.log(person33.length) //undefiend
+
+
+    // حلقه برای آرایه ها 
+    for (let x=0 ;x< newArr.length; x++){
+        console.log(newArr[x]);
+    }
+
+
+ }
+
+ const createObjectWithFunction=()=>{
+    // فرض کنید یک ساختار واحد از آبجکت داریم اما آن را برای بیشتر از یک نفر یا بیشتر از یک تعداد انسان نیاز داریم
+    //منطقی نیست که به آن تعداد فرد آبجکت ایجاد کنید فرضا ده نفر که میشه ده تا آبجکت جدا 
+    // راه حل اینه که یک ساختار واحد بسازیم و هرجا خواستیم با یک خط کد آن آبجکت را بسازیم 
+    // ***
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // مثال 
+// git command ---------*****
 
 
 
