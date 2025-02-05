@@ -304,12 +304,115 @@ const functionObject=()=>{
     //منطقی نیست که به آن تعداد فرد آبجکت ایجاد کنید فرضا ده نفر که میشه ده تا آبجکت جدا 
     // راه حل اینه که یک ساختار واحد بسازیم و هرجا خواستیم با یک خط کد آن آبجکت را بسازیم 
     // ***
+    function PersonObj(first,last,age,eye){
+        this.firstName= first;
+        this.lastName= last;
+        this.age= age;
+        this.eyecolor= eye
+    }
+    const myPerson1= new PersonObj("sheida","zeinali",20,"brown");
+    const myPerson2= new PersonObj("mehdi","ebrahimi",20,"brown")
+    console.log(myPerson1);
+    console.log(myPerson2)
  }
 
+//  *********Build-in js constructores*********** 
+//new Object() //new obj
+// new Array() //new array
+// new Map() // new Map   (set()-get()-has()-.size) یک ساختار داده هست به اسم مپ که متدهای خودش رو داره
+// new Set() //new Set -no duplicated items-  add()-delete()- has()-clear()
+// new Date() //new Date   getFullYear()-
+// new RegExp() //new regex
+// new Function() //new function
+
+const exampleNobject=()=>{
+    const myObject= new Object(); // const myObject= {}
+    myObject.firstname="sahar";
+    myObject.age="20";
+    myObject.job="UI designer";
+    console.log(myObject);
+}
+
+const exmapleNewArr=()=>{
+    const personArr=new Array() // const productArr= []
+    personArr[0]= "nilu";
+    personArr[1]="delkeshan";
+    personArr[2]="melorinet";
+    console.log(personArr);
+    console.log(personArr.length);
+}
+
+const exampleNMap=()=>{
+    const myMap= new Map();
+    myMap.set('name','Zohre');
+    myMap.set('age',16);
+    myMap.set('job','IT eng');
+    console.log(myMap); 
+    const objKey= {id:1}; //کلیدم اینجا میتونه خودش یه آبجکت جدا باشه
+    const objKey1= {num:3}
+    myMap.set(objKey,"value that its key is an object");
+    myMap.set(objKey1,"price")
+    console.log(myMap);
+
+    console.log(myMap.get('name')) //Zohre
+    console.log(myMap.get('age'))
+    console.log(myMap.get(objKey)) //"value that its key is an object"
+    console.log(myMap.has("job")) //true
+    console.log(myMap.has("occupation")) //false
+
+    console.log(myMap.size);
+}
 
 
+const ExampleSet=()=>{
+    // const mySet= new Set(); //اینجا یک ساختار داده ی ست میسازید
+    //کالکشنی از مقادیر یونیک که مقادیر تکراری رو حذف میکنه
+    // mySet.add(2);
+    // mySet.add(5);
+    // mySet.add("hello");
+    // mySet.add("5");
+    // console.log(mySet);
+    // mySet.add({name:"mehdi"});
+    // console.log(mySet);
+    // const HasTwo= mySet.has(5);
+    // console.log(HasTwo) //true
+    // mySet.delete(5);
+    // console.log(mySet.has(5))
+    // mySet.clear();
+    // console.log(mySet);
+
+    //فرض کنید یک لیستی از شماره تماسهای کاربران گرفته اید اما نمیخواهید شماره تماسهای تکراری را در
+    //تگ اچ تی ام هایتان و در وبسایتتان نمایش دهید چه راه حلی دارید؟
+    // جواب؟ 
+    const numbers= [22,11,22,33,44,44,5]; // هدف [22,11,33,44,5]
+    console.log(numbers);
+    const UniqueNumbers= new Set(numbers); // object set misaze 
+    console.log(UniqueNumbers);
+    const finalUniwquenumbersArr= [...new Set(numbers)];
+    // rest of the item... >
+    const finalUniwquenumbersArr2= [new Set(numbers)];
+    console.log(finalUniwquenumbersArr);
+    console.log(finalUniwquenumbersArr2);
+
+}
 
 
+const exampleDate=()=>{
+    const currentDate=new Date();
+    console.log(currentDate);
+    const specificDate= new Date('2025-2-12');
+    console.log(specificDate);
+    const customDate = new Date(2024,8,20,14,30) //(year,month,day,hour,minute)
+    console.log(customDate);
+
+    const current= new Date();
+    console.log(current.getFullYear());
+    console.log(current.getMonth());
+    console.log(current.getHours());
+    console.log(current.getMinutes());
+    console.log(current.getSeconds());
+    // Date.now()
+}
 
 
 
