@@ -330,7 +330,7 @@ const exampleNobject=()=>{
     myObject.firstname="sahar";
     myObject.age="20";
     myObject.job="UI designer";
-    console.log(myObject);
+    console.log(myObject.firstName);
 }
 
 const exmapleNewArr=()=>{
@@ -338,7 +338,7 @@ const exmapleNewArr=()=>{
     personArr[0]= "nilu";
     personArr[1]="delkeshan";
     personArr[2]="melorinet";
-    console.log(personArr);
+    console.log(personArr[1]);
     console.log(personArr.length);
 }
 
@@ -412,16 +412,87 @@ const exampleDate=()=>{
     console.log(current.getMinutes());
     console.log(current.getSeconds());
     // Date.now()
+
+    
 }
 
+// گرفتن تایم استمپ الان 
+    // get the current timestamp
+    // یکی از کاربردهاش ایجاد ای دی یونیک هست 
+    const timestamp=()=>{
+        const ts=Date.now();
+        console.log(ts)
+    }
+
+    const testDate=()=>{
+        const mydate= new Date();
+        let x= mydate.toDateString();// تاریخی رو میده که قابل خوندن برای کاربر باشه 
+        console.log(mydate);
+        console.log(x);
+
+        let y= mydate.toLocaleDateString(); // "2/9/2025"
+        console.log(y);
+
+        let m= mydate.toLocaleTimeString();
+        console.log(m);
+
+        let iso=mydate.toISOString();
+        console.log(iso)
 
 
+        const date1= new Date("2024-09-20");
+        const date2= new Date("2023-09-20");
 
+        console.log(date1 > date2);
+        console.log(date1 < date2);
+    }
+    // *********************
+    // new Regexp() => regular expression => بیان منظم 
+    // بیشترین کاربردش در بررسی امن بودن پسوردی که کاربر وارد میکنه هست 
 
+    const testRegexp=()=>{
+        // تعریف بیان منظم 
+        // const regex = new RegExp('A');
+         const regex = new RegExp('Hello','i');
+        //  const regexx= /hello/;
+        // const regex22 = new RegExp('Hello','g');
 
+        // sensitive =>حساس به حروف کوچک و بزرگ new RegExp('A')
+        // insensitive => حساس نیست به حروف کوچک و بزرگ (i)/  new RegExp('A','i')
+        // const mytest1= regex.test('apple'); // boolean
+        // const mytest2= regex.test('banana');// boolean
+        // const mytest3= regex.test('Apple');// boolean
+        // const mytes4= regex.test('Hello , world!');
+        // console.log(mytes4);
 
+        const testString= "world ,hello!,hello";
+        const match = testString.match(regex);// [خروجی ارایه]با اطلاعات جزیی
+        console.log(match)
 
+        // const regexx= /hello/;
+        // const text= "Hello,world!hello,again";
+        // const m= regexx.test(text);
+        // console.log(m)
 
+        // ***************(g)global????
+
+    }
+
+    const validatePassword=()=>{
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        const password = document.getElementById("passWord").value;
+        // zohreh25z!X=> secure
+        //1234566788
+        // if(passwordRegex.test(password) === true) // این دو خط کد با هم برابره
+          if(passwordRegex.test(password)) // این خط کد با خط بالایی برابره
+            {
+            alert("پسورد شما امن است")
+        }else {
+            alert("پسورد شما امن نیست")
+        }
+    }
+
+    
 
 
 
