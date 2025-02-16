@@ -491,6 +491,112 @@ const exampleDate=()=>{
             alert("پسورد شما امن نیست")
         }
     }
+    // *************************************new Function**** 
+    // بری ایجاد تابع در زمان runtime
+
+    const testNF=()=>{
+        const add= new Function('a','b', 'return a+ b');
+        // به صورت داینامیک یک تابع ایجاد کردیم
+        let myresult1= add(2,3);
+        let myr2= add("12","3");
+        console.log(myr2);
+
+    }
+
+    const testNF2=()=>{
+      
+        const toUpperCase= new Function('str','return str.toLowerCase()');
+        // toLowerCase() - toUpperCase()
+        let result1= toUpperCase('HWLLOOO!');
+        console.log(result1);
+    }
+
+    const testNF3=()=>{
+        let APIdata= false; //فرض کنید اینو از سرور گرفتید
+        const myFunction= new Function('input1','input2','return alert(input1+input2),console.log(input1+input2)');
+        if (APIdata){
+            myFunction('correct data',true)
+        }else{
+            myFunction('incorect data',false)
+        }
+    }
+
+    // از لحاظ امنیت وبسایت از نوشتن new Function خودداری کنید 
+    // مگر در مواردی که ورودی های آن حساس نباشد 
+    // مگر در مواقع ضروری و داده های غیر حساس
+
+
+    // **********************************Javascript Events************ 
+    // onchange()
+    // onclick()
+    // onmouseover() 
+    // onmouseout()
+    // onkeydown()
+    // onload() 
+
+    // ******onchange() 
+    const handleCahnge=()=>{
+        alert("changing");
+        let userText= document.getElementById("inputText").value;
+        console.log('متن کاربر:'+userText);
+    }
+
+    // onclick()**** 
+
+    const handleMouseOver=()=>{
+        document.getElementById("mouseover-text").style.backgroundColor="lightblue";
+        document.getElementById("status").innerText="ماوس بر روی div"
+    }
+
+    const handleMouseOut=()=>{
+     document.getElementById("mouseover-text").style.backgroundColor="";
+        document.getElementById("status").innerText="ماوس کنار رفت"
+    }
+
+     // onmouseover() *****
+    // onmouseout()******
+    const sendInputData=()=>{
+        console.log("sending data to server......");
+    }
+ // onkeydown()*****
+    const hendleKeyDown=(event)=>{
+        alert(event.key);
+        if(event.key === "Enter"){
+            sendInputData();
+        }else{
+
+        }
+    }
+
+    const getDataFromServer=()=>{
+        console.log("getting data from server......")
+    }
+// onload() *****
+// window.onload= function(){
+//     alert(" به وبسایت من خوش آمدید")
+//     getDataFromServer();
+
+// }
+
+// **************************************معرفی انواع strings****************************** 
+//( "" , '') and (``) // تفاوت زیادی بین این دو گروه وجود داره با اینکه هر دو استرینگ هستن
+// `` => backtick - templateString 
+// ``=> نوعش استرینگ ``  
+
+const testTemplateString=()=>{
+    let x=244;
+    let name =  `${x} is a number or string?`;
+    console.log(name);
+    // *** نشان دادن کدهای من --- 
+}
+
+
+
+
+
+
+
+
 
     
 

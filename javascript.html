@@ -7,12 +7,22 @@
     <script src="javascript/javaFuncs.js" ></script>
 </head>
 <body>
-    <button onclick="testRegexp()"  >   اجرای تابع  </button>
+    <button onclick="testTemplateString()"  >   اجرای تابع  </button>
     <p id="emptySpace" ></p>
     <p id="text" ></p>
-    <form onsubmit="validatePassword()" >
+    <!-- <form onsubmit="testNF()" >
         <input type="password" id="passWord" placeholder="eneter your password" >
         <input type="submit">
-    </form>
+    </form> -->
+
+    <label for="inputText">متن زیر را تغییر دهید</label><br/>
+    <input type="text" id="inputText" onchange="handleCahnge()"  ><br>
+
+    <div id="mouseover-text" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()"  >HOVER ON ME ماوس را روی این قسمت بیاورید</div>
+    <p id="status" ></p> <br><br><br>
+
+    <label for="ketInput">یک کلید را فشار دهید از کیبورد</label>
+    <input type="text" id="keyInput" onkeydown="hendleKeyDown(event)">
+
 </body>
 </html>
