@@ -69,7 +69,6 @@ const exampleOfConst=()=>{
 const SomeDataTypes=()=>{
     let num= 10;//number
     let num2 =30;
-    // console.log(num);
     let myid = "10"; //string
     let string1= "name1";//string
     let string2='name2'//string
@@ -590,6 +589,102 @@ const testTemplateString=()=>{
     // *** نشان دادن کدهای من --- 
 }
 
+// *************متد های string  ها******* 
+ // length
+  const lengthExample =()=>{
+    let text1= "abcdefghi nhbcsbo";
+    let mylength= text1.length;
+    console.log(mylength);
+  }
+
+  //charAt
+  const charAtExample=()=>{
+    let text2= "HELLO WORLD";
+    let result= text2.charAt(6);
+    console.log(result);
+  }
+
+  //charCodeAt=> utf-16 (integer 0 - 65535)
+const charCodeAtExample=()=>{
+    let text3= "Hello friends";
+    let result= text3.charCodeAt(2);
+    console.log(result);
+}
+
+//at() => 2022
+const atExample=()=>{
+    let text4="Melorinet";
+    let result = text4.at(-2);
+    let result1 = text4.at(4);
+     console.log(result);
+    let result2= text4[3];
+    // console.log(result2);
+}
+
+// ********برای گرفتن قسمتی از استرینگ ها ******* 
+// slice(Start,end) =>> آخرین کاراکتر رو بهت نمیده
+// substring(Start,end) آخرین کاراکتر رو بهت نمید
+// substr(start,length) => deprecated
+
+//slice()
+const sliceExample=()=>{
+    let txt1= "AppleIdie tMacSystem";
+    let result1= txt1.slice(0,5);
+    // console.log(result1);
+    // اگر فقط یک مقدار بگیرد استرینگ را از اون ایندکس نصف میکند و نصف دوم را به ما میدهد
+    let result2= txt1.slice(4);
+    // console.log(result2);
+    let result3= txt1.slice(-7,-5)
+    console.log(result3);
+}
+
+//substring()
+// عین slice()
+// این هک کاراکتر آخر رو تحویل نمیده
+// اما منفی نمیگیرد 
+// اگر مقدار منفی دهیم آن مقدار را صفر تلقی میکند
+const substringExample=()=>{
+    let txt2="APPLEbANANAkiwi";
+    let result1= txt2.substring(7,0); // ok 0-7
+    let result2= txt2.substring(0,7); // ok 0-7
+    console.log(result2);
+}
+
+// substr()
+// deprecate شده منسوخ
+// same as slice()
+
+const substrExample=()=>{
+    let txt3="APPLEbANANAkiwi";
+    let result = txt3.substr(7,6); // دومین عدد طول داده ی برگردانده شده است
+    console.log(result);
+}
+
+// **************** toUpperCase(), toLowerCase()******* 
+// Uppercase=> H,M,R حروف بزرگ انگلیسی Capslock
+//LowerCase => h,m,r 
+
+const exampleFunc=()=>{
+    let txt="hello my students";
+    let txt1="HI THERE HOW ARE YOU";
+    let result= txt.toUpperCase();
+    // document.getElementById("status").innerText=result;
+    // console.log(result);
+    // alert(result);
+    let result2= txt1.toLowerCase();
+    console.log(result2)
+}
+
+// ***concat()*****  دو تا استذینگ رو ادغام میکنه
+const concatExample=()=>{
+    let txt1="I have";
+    let txt2= "20 years old";
+    let finaltxt= txt1.concat(txt2);
+    document.getElementById("status").innerText= finaltxt;
+    document.getElementById("status").style.color="red";
+}
+
+// trim()******* فاصله اضافی رو از هر دو طرف استرینگ پاک میکنه
 
 
 
