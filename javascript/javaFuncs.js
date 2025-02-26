@@ -429,7 +429,7 @@ const exampleDate=()=>{
         console.log(mydate);
         console.log(x);
 
-        let y= mydate.toLocaleDateString(); // "2/9/2025"
+        let y= mydate.toLocaleDateString().replaceAll("/",""); // "2/9/2025"
         console.log(y);
 
         let m= mydate.toLocaleTimeString();
@@ -685,8 +685,148 @@ const concatExample=()=>{
 }
 
 // trim()******* فاصله اضافی رو از هر دو طرف استرینگ پاک میکنه
+//trimStart()
+//trimEnd()
+const trimsample=()=>{
+    let text1="    Hi World!    ";
+    let comment= text1.trim();
+    // console.log(text1);
+    // console.log(comment);
+    // console.log(text1.length);
+    // console.log(comment.length);
+    let tstart=text1.trimStart();
+    let tend=text1.trimEnd();
+    console.log(tstart);
+    console.log(tend);
+}
+
+// ********padStart(lenghth,item to add)-padEnd()******* مقداری رو به اول و یا اخر استرینگ اضافه میکنه
+// padStart(lenghth,item to add)
+const padStartample=()=>{
+    let text="5";
+    let mytext= text.padStart(5,"higuys");
+    console.log(mytext);
+
+    let num= 3;
+    let mystring= num.toString();
+    let finaltxt= mystring.padStart(4,"0");
+    console.log(finaltxt);
+}
+
+// padEnd() 
+const padEndSample=()=>{
+    let num=7;
+    let mstring= num.toString();
+    let final= mstring.padEnd(10,"1");
+    console.log(final.length);
+    console.log(final)
+}
+
+// repeat(تعداد تکرار) ****** 
+const repeatSample=()=>{
+    let text="   hi my dear friends";
+    let lastComment= text.repeat(5);
+    console.log(lastComment);
+}
+
+// replace()***** جایگزین میکنه
+const replaceSample=()=>{
+    let mytxt="please visit my website";
+    let lastxt= mytxt.replace("my","Melorinet");
+    // console.log(lastxt);
+
+    // به i و g میگن regular expression 
+    // g => glabal یعنی همه ش رو در نظر بگیر و فقط بر روی اولی اعمال نکن
+    // insensitive => غیر حساس از حروف بزرگ و کوچک
+    // sensitive => حساس از حروف بزرگ و کوچک
+    let mytxt1="please visit My website my My";
+    let lastxt1= mytxt1.replace("my","Melorinet");
+    let lastxt2= mytxt1.replace(/my/ig,"Melorinet");
+    let lastxt3= mytxt1.replace(/my/g,"Melorinet");
+
+    console.log(lastxt3);
+
+}
+
+// ***** replaceAll()***** 2021 doesnt work on Internetexplorer
+const replaceAllSample=()=>{
+    let txt="فارسی زبان شیرین جهان است و این یک متن فارسی است";
+    let result= txt.replaceAll("فارسی","پرشین");
+    console.log(result);
+}
+
+// *************تبدیل استرینگ به آرایه *********
+// [q,1,"de"] آرایه
+// {name:"nilu",id:1} آبجکت
+// text.split(",");
+// text.split("") 
+
+const splitSample=()=>{
+    let txt="شماره۱ شماره۲ شماره۳";
+    let result1= txt.split(",");
+    let result2= txt.split(" ");
+    let result3= txt.split("");
+
+    console.log(result1);
+    console.log(result2);
+    console.log(result3)
+}
+
+// ******************متدهای جستجو در استرینگ ها 
+// indexOf از صفر شروع به شمارش میکنه- lastindexOf()
+// -1 => این خروجی یعنی هیچ مچی پیدا نکرده ازش indexof() and lastindexOf()
+let sampleIndexof=()=>{
+    let text="because the sky is high sky";
+    let result= text.indexOf("because");//0 => index of b
+    let result2= text.indexOf("sky");//12 => index of s (first sky)
+    let result3= text.indexOf("shine")
+    console.log(result3);
+
+let res4= text.lastIndexOf("sky") //آخرین مچ رو در نظر میگیره برا موارد تکراری
+console.log(res4);
+}
+
+// ************** search() ****
+// اگر مچی پیدا نکنه خروجی -1 
+const searchSample=()=>{
+    let text="because the sky is high sky";
+    let result= text.search("the");// ایندکس اولین حرف رو میده
+    console.log(result);
+} 
+
+// *********** match()****** index - array ()اطلاعاتی اضافی تر از متدهای بالا رو میده
+const matchSample=()=>{
+    let inputsearch= "کفش اسپورت سفید سفید";
+    let result= inputsearch.match("سفید").index;
+    let result1= inputsearch.match(/سفید/g);
+    // /i /g 
+    console.log(result1);
+}
 
 
+// ********** includes()****** result is boolean
+const includesSample=()=>{
+    let inputsearch= "کفش اسپورت سفید سفید";
+    let res= inputsearch.includes("کفش"); // برای مثال API کفش رو فراخوانی میکنی اگر true باشه
+    let res1=inputsearch.includes("بلوز") //
+    // if(res === true) برابره با if(res) 
+    // if(res === false) برابره با if(!res) 
+    
+}
+// مثال داخل پرانتزی
+const exmapleImportant=()=>{
+    let x= "1";
+    let y=1;
+    //  در جاواسکریپت به هیچ وجه از دو تا مساوی استفاده نکنید همیشه از سه تا مساوی استفاده کنید مساویه سوم به معنی برابر بودنه نوعه داده ی دو طرف هست
+    if (x == y) {
+        console.log("yes")
+    }
+    if ( x === y){
+        console.log("okay equal")
+    }
+    // === به معنی بررسی هم مقدار و هم نوع داده هست
+    // نوع داده مثلا استرینگ یا نامبر یا بولین ///
+}
 
 
 
