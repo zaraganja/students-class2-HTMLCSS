@@ -813,6 +813,7 @@ const includesSample=()=>{
     // if(res === false) برابره با if(!res) 
     
 }
+
 // مثال داخل پرانتزی
 const exmapleImportant=()=>{
     let x= "1";
@@ -829,12 +830,172 @@ const exmapleImportant=()=>{
 }
 
 
+const getshoesData=()=>{
+    // fetch ot axios
+    //اینجا داده ی کفش رو از سمت سرور میگیریم
+    // یعنی لیست کفش های اون فروشگاه رو از طریق API میگیریم
+    console.log("list of shoes")
+}
 
+const getOutfitData=()=>{
+    // fetch or axios 
+    //لیست داده های لباس هارو میده از Apı
+    console.log("list of outfit")
+}
 
+const SearchFunction=()=>{
+    let inputsearch= "بلوز مردانه  ";
+    let res= inputsearch.includes("کفش"); // برای مثال API کفش رو فراخوانی میکنی اگر true باشه
+    let res1=inputsearch.includes("بلوز") //
+    console.log("res:"+res +"and res1:"+ res1);
+    if(res){
+        getshoesData()
+    }else
+    if(res1){
+        getOutfitData()
+    }
+    // if(res === true) برابره با if(res) 
+    // if(res === false) برابره با if(!res) 
+}
 
+// **********startsWith()*****result is boolean
+const sampleStartswith =()=>{
+    let text="because the sky is high sky!";
+    let res= text.startsWith("because");//true
+    let res1=text.startsWith("the",8);//true
+    let res2= text.startsWith("!");//false
+    console.log(" res is :"+ res +" and res1 is:"+ res1 + " and res2 is:"+res2);
+}
 
+// *********endsWith(string,تعداد کل کاراکتر رو تعیین میکنی)******* result is boolean 
+const sampleendsWith =()=>{
+    let text="because the sky is high sky!";
+    let res= text.endsWith("sky!");//true
+    let res1=text.endsWith("because",7);//کل متن رو محدود میکنی به هفت کاراکترtrue
+    let res2= text.endsWith("sky");//
+    console.log(" res is :"+ res +" and res1 is:"+ res1 + " and res2 is:"+res2);
+}
+
+// ******************** JS Template string
+// backtick ``
+// template string
+//template literals
+//beloved child
+const backtick=()=>{
+    let fn="Parya";
+    let ln="Tayefe";
+    let mytext= `my full name is ${fn} ${ln} `;
+    let mytxt= `<h3>${fn}${ln} </h3>`
+    document.getElementById("emptySpace").innerHTML=mytxt;
+    document.getElementById("emptySpace").style.color="red";
+    document.getElementById("text").innerHTML=mytext;
+    document.getElementById("text").style.color="red";
+}
+
+// **************JS numbers ***** 
+//NaN => Not a Number یعنی عدد نیست
+//undefiend =>تعریف نشده
+//null => خالیه
+
+const testNaN=()=>{
+    let x= 100/"apple";
+    let y;
+    let z= null
+    console.log(x);
+    console.log(y);
+    console.log(z);
+    let m= 100/"10";// 10
+    // return m
+    console.log(m);
+    let n= 2/0; //Infinity بی نهایت 
+    console.log(n);
+    let k= -2 / 0;//-Infinity منفی بی نهایت
+    console.log(k);
+}
+
+// ************* toString()-toExponential()- toFixed()-toPrecision()-valueOf()-typeof()******* 
+//typeof() نوع داده رو میده
+
+// toString()
+const texttoString=()=>{
+    let x= 1234;
+    let res= x.toString();
+    let y= true;
+    console.log(typeof(x));//number
+    console.log(typeof(res));//string
+    console.log(typeof(y));// boolean
+    console.log(` x is : ${x} and res is ${res}`);
+}
+
+// toExponential(رقم اعشار) رند به بالا انجام میده بعد از ممیز رو -خروجی استرینگه
+const testtoExponential=()=>{
+    let x= 8.678;
+    let y= x.toExponential(1);// 8.7
+    let m= x.toExponential(4);// 8.6780e+0
+    console.log(typeof(m));
+}
+
+//toFixed(تعداد رقم اعشاری) برای رند کردن مقادیر پولی استفاده میشه -خروجی استرینگه
+const tofixedTest=()=>{
+    let x= 8.678;
+    let res1= x.toFixed(0);
+    let res2= x.toFixed(2);
+    let res3= x.toFixed(4);
+    let res4= x.toFixed(6);
+    console.log(typeof(res1));
+    console.log(res2);
+    console.log(res3);
+    console.log(res4);
+}
+
+//toPrecision(تعداد کل رقم ها بدون در نظر گرفتن ممیز)خروجی استرینگه = تعداد کل عدد ها بدون در نظر گرفتن ممیز رو میده
+// بعد از ممیز رو روند میکنه
+const testtoPrecision=()=>{
+    let x= 8.6789;
+    let res1= x.toPrecision();
+    let res2= x.toPrecision(2);
+    let res3= x.toPrecision(4);
+    let res4= x.toPrecision(6);;
+    console.log(res1)
+    console.log(res2)
+    console.log(res3)
+    console.log(res4)
+    console.log(typeof(res1))  
+}
+
+//valueof()با یه تیر دو نشون = اون مقدار رو با نوعش برمیگردونه
+// نوعش زیاد دقیق نیست ولی مقدار اون متغیر رو برمیگردونه 
+const textValueof=()=>{
+    let x= 123;
+    let y= "123";
+    let z= "hi";
+    let b= true;
+    console.log(x.valueOf());
+    console.log(y.valueOf());
+    console.log(z.valueOf());
+    console.log(b.valueOf());   
+}
+
+// *****توابعی که باعث تبدیل متغیر ها به عدد میشن 
+//Number();
+//parseFloat()
+
+//Number
+const Numbertst=()=>{
+    let x= "22";
+    let y = Number(x);// 123 عدد
+    let b= false;
+    let b1= true;
+    let z1= Number(b1);//1
+    let z= Number(b);// 0
+   // console.log(typeof(x));//string
+    //console.log(typeof(y));//number
+    console.log(typeof(z));//number
+    console.log(z);
+    console.log(z1);
+}
     
-
+//parsFloat()
 
 
 
