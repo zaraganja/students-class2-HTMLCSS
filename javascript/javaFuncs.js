@@ -975,6 +975,14 @@ const textValueof=()=>{
     console.log(z.valueOf());
     console.log(b.valueOf());   
 }
+// 2. xxxxxxxxx tasks
+// ******************************توابعی که یک یا چندید ورودی دارن ----- 
+const getDataFromAPI=(id,token,pageNum)=>{
+    let API= `https://students.ir/${id}/${token}/${pageNum}`;
+    // هر وقت این ورودی ها عوض بشن داده هایی که از سمت سرور برمیگرده هم عوض میشن
+    console.log(API);
+    console.log(`getting data of page ${pageNum}`);
+}
 
 // *****توابعی که باعث تبدیل متغیر ها به عدد میشن 
 //Number();
@@ -995,7 +1003,99 @@ const Numbertst=()=>{
     console.log(z1);
 }
     
-//parsFloat()
+//parsFloat()یک ورودی به عنوان استرینگ میگیره و خروجی اولین عدد رو میده
+// نوع خروجی عدد هست 
+const sampleParsefloat=()=>{
+    let n1= 10;// 10
+    let n2= "10.33";//10.33
+    let result= parseFloat(n2);//10.33 number
+    console.log(parseFloat("30.44 hello 50"));//30.44
+    console.log(typeof(result));
+
+}
+
+// ********متدهای آرایه های جاواسکریپت-------- 
+
+//  join()******آیتم های ارایه رو میگیری و کنار همدیگه قرار میدی وسطاش هرچی دلت خواست میذاری
+const joinSample=()=>{
+    const colors=["1","3","8"];
+    console.log(colors);
+    console.log(colors.join("*"));
+    console.log(colors.join("*"));
+    console.log(colors.join(" "));
+    console.log(colors.join(""));
+}
+
+// pop()آخرین ایتم از ارایه رو میگیره و حذف میکنه
+// روی ارایه اصلی تاثیر میگذارد 
+const popSample=()=>{
+    let myArr=["item1","item2","item3","item4"];
+    let popresult= myArr.pop();
+    console.log(popresult);
+    console.log(myArr);
+}
+
+// push("newitem")یه آیتم رو به آخر ارایه اضافه میکنه 
+// روی آرایه اصصلی تاثیر میذاره 
+const pushSample=()=>{
+    let myArr=["item1","item2","item3","item4"];
+    let res= myArr.push("newITEM");//خروجی این خط حاوی ارایه جدیدم نیست اما حاوی طول ارایس
+    console.log(res);
+    console.log(myArr);
+}
+
+// shift()اولین آیتم از ارایه رو حذف میکنه و روی ارایه اصلی تاثیر میذاره
+const shiftSample=()=>{
+    let myArr=["item1","item2","item3","item4"];
+    let res= myArr.shift();// item1
+    console.log(res);
+    console.log(myArr);
+    myArr.shift();
+    console.log(myArr);
+    myArr.shift();
+    console.log(myArr);
+    myArr.shift();
+    console.log(myArr);
+
+}
+
+// unshift("newItemm")
+const unshiftSample=()=>{
+    let myArr=["item1","item2","item3","item4"];
+    let res22= myArr.unshift("newItemmm");//خروجی طول ارایه جدیده
+    console.log(res22);
+    console.log(myArr);//ارایه جدیده
+}
+
+const arrSample=()=>{
+    let myArr=["item1","item2","item3","item4"];
+    //  myArr[0]="item123";//قدرت نداره ارایه رو شیفت بده
+    //  delete myArr[0];// به هیچ وجه اینکارو انجام ندید چون جای ا.ن ایتمو خالی میذاره
+    console.log(myArr);
+}
+
+
+//کلا غلطه delete()*********hole خالی در ارایه ایجاد میکنه 
+
+// concat()ادغام میکنهادغام کردنه چندین ارایه استفاده میشه
+const concatSample=()=>{
+    let myArr=["item1","item2","item3","item4"];
+    let mynewArr= myArr.concat("item345");
+    console.log(mynewArr);
+    let myArr2=["item1344","item2555"];
+    let myArr3=["1","44","66","99"];
+    let FinalArr= myArr.concat(myArr2,myArr3);
+    console.log(FinalArr)
+}
+
+//copyWithin(ایندکسی که قرار داخلش کپی انجام بشه,index from,to index)***
+
+
+
+
+
+
+
 
 
 
