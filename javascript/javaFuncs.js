@@ -1088,11 +1088,128 @@ const concatSample=()=>{
     console.log(FinalArr)
 }
 
-//copyWithin(ایندکسی که قرار داخلش کپی انجام بشه,index from,to index)***
+//copyWithin(ایندکسی که قراره داخلش کپی انجام بشه,index from,to index)***
+// طول آرایه اصلی رو عوض نمیکنه 
+// به آرایه آیتم جدیدی اضافه نمیکنه 
+// المنتهای آرایه به موقعیت دیگه کپی میشه 
+const copyWithinSample=()=>{
+    const fruites= ["banana","apple","kiwi","orange","mango"];
+    fruites.copyWithin(2,1);
+    console.log(fruites);
+}
 
+// flat()************ یک ارایه جدید ایجاد میکنه
+const sampleFlat=()=>{
+    const myarr=[[1,2],3,4,[5,6]];
+    const newarr= myarr.flat();
+    console.log(newarr);
+}
 
+// flatMap()*******
+const flatmapSample=()=>{
+    const myarr=[1,3,5,8,9,4];
+    const newArr1= myarr.flatMap(x=>[x*10]);//[10,30]
+    const newarr2= myarr.flatMap(x=>[x,x + "item"]);//[1,"1item",...]
+    console.log(newArr1);
+    console.log(newarr2);
+}
+// slice() یه قسمتی از ارایه رو جدا میکنه 
+// splice() آیتم های جدیدی به ارایه اضافه میکنه 
 
+const testsplice=()=>{
+    const fruites= ["banana","orange","apple","mango","123"];
+    //   fruites.splice(2,1,"Lemon","kiwi");
+    // (start index,delete count,...);
+    // fruites.splice(2,1,"Lemon","Kiwi");
+    //  fruites.splice(2,2,"Lemon","Kiwi");
+    // fruites.splice(2,3,"Lemon","Kiwi");
 
+       fruites.splice(3,1);
+       console.log(fruites);
+    //   ;بدون ایجاد Hole آیتم رو حذف میکنه     
+}
+
+// slice()*******یک ارایه جدید میسازه 
+const testslice=()=>{
+    const fruites= ["banana","orange","apple","mango","123"];
+   const newfruites= fruites.slice(2)
+    console.log(newfruites);
+     const newf2= fruites.slice(2,4);//(تا اینجا اما خودش نه ,از اینجا و خودش)
+    console.log(newf2);
+}
+
+// toSpliced() ES2023 
+const testtoSpliced=()=>{
+    const months=["Jan","Feb","Mar","Apr"];
+    // months.toSpliced(0,1)
+    const newmonth= months.toSpliced(0,1);
+    console.log(newmonth);
+}
+
+// ************** متدهای جستجو در ارایه ها -------
+// indexOf(item,start to search"optional")
+const testIndexOf=()=>{
+    const fruites= ["banana","orange","apple","mango","123"];
+    let position= fruites.indexOf("apple");
+    let p= fruites.indexOf("apple",1)
+    console.log(p);
+}
+
+// lastIndexOf(item,where to start serach"optional")
+const testLastIO=()=>{
+    const fruites= ["banana","orange","apple","orange","mango","orange","123"];
+    const result= fruites.lastIndexOf("orange");
+    const res2=fruites.indexOf("orange");
+    console.log(result);
+    console.log(res2);
+}
+
+// includes()-boolean خروجی
+const testincludes=()=>{
+    const fruites= ["banana","orange","apple","mango","123"];
+  const hasOrNot=  fruites.includes("kiwi");//false
+    console.log(hasOrNot);
+}
+
+// find(function)
+const testFind=()=>{
+    const nums=[4,9,16,25,29];
+    let res= nums.find(myFunction)
+    console.log(res);//25
+}
+function myFunction(value,index,array){
+    return value > 18
+}
+
+// findIndex(function)
+const testFindIndex=()=>{
+    const nums=[4,9,16,25,29];
+    // let res= nums.findIndex(x=>x>18)
+     let res= nums.findIndex(myFunction)
+    console.log(res);//3
+}
+function myFunction(value,index,array){
+    return value > 18
+}
+
+// findLast(function)
+const testfindLast=()=>{
+    const temp=[27,42,28,30,40,42,25,40];
+    let high= temp.findLast(myFunction);
+    console.log(high);
+}
+function myFunction(value,index,array){
+    return value > 40
+}
+
+// findLastIndex(function)**
+const testfindLastIndex=()=>{
+    const temp=[27,42,28,30,40,42,25,40];
+    let high= temp.findLastIndex(x=>x>40);
+    console.log(high);
+}
+
+// *************متدهای مرتب کردن آرایه ها ******
 
 
 
