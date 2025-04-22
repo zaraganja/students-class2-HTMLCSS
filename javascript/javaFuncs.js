@@ -1211,6 +1211,145 @@ const testfindLastIndex=()=>{
 
 // *************متدهای مرتب کردن آرایه ها ******
 
+// sort() به ترتیب حروف الفبا مرتب میکنه ،حرف اول و یا عدد اول رو میگیره 
+const testSort=()=>{
+    const fruits= ["Banana","Orange","Apple","Mango"];
+    fruits.sort();
+    console.log(fruits);
+    const nums=[22,3,44,18];
+    nums.sort();
+    console.log(nums)
+}
+
+//reverse()  آرایه رو از آخر به اول مرتب میکنه برعکسش میکنه
+const testReverse=()=>{
+    const fruits= ["Banana","Orange","Apple","Mango"];
+    fruits.reverse();
+    console.log(fruits); 
+}
+
+// toSorted()تفاوتش اینه که ارایه اصلی رو تغییر نمیده
+const testtoSorted=()=>{
+    const fruits= ["Banana","Orange","Apple","Mango"];
+   const newFruites =fruits.toSorted();
+    console.log(newFruites);
+    const nums=[22,3,44,18];
+  const nesNums=  nums.toSorted();
+    console.log(nesNums)
+}
+
+// toReversed() تفاوتش اینه که ارایه اصلی رو تغییر نمیده
+const testToReversed=()=>{
+    const fruits= ["Banana","Orange","Apple","Mango"];
+  const newFruits=  fruits.toReversed();
+    console.log(newFruits); 
+}
+
+// ******تکرار ارایه های جاواسکریپت--- JS array iteration 
+// forEach(function) اشاره میکنه به هر آیتم از آرایه
+// اگر بخواهیم روی آیتم های یک ارایه تغییراتی انجام بدیم 
+const foreachTest=()=>{
+    const nums=[45,4,9,16,25];
+    nums.forEach(myInnerFunction)
+}
+let newarray=[];
+const myInnerFunction=(value,index,array)=>{
+    let txt="";
+    txt += value+"and" + index   //  => txt= txt + value +"<br>" + index
+    newarray.unshift(txt);
+    console.log(newarray);
+}
+
+// map()- faltMap() یک ارایه جدید ایجاد میکنه و ارایه اصلی رو تغییر نمیده
+ const testMap=()=>{
+    const nums=[45,4,9,16,25];
+   const newarr= nums.flatMap((x)=>x*2)
+   console.log(newarr)
+    // nums.flatMap(mapinnerFunc)
+ }
+let newArr=[];
+ const mapinnerFunc=(value,index,array)=>{
+    let newitem= value * 2* index;
+    newArr.unshift(newitem);
+    console.log(newArr);
+ }
+
+//  filter() - برای پاس کردن یک تستی روی ارایه استفاده میشه
+ const testfilter=()=>{
+    const nums=[45,4,9,16,25];
+    const over18value= nums.filter(testinnerFunc);
+    console.log(over18value);//خروجی یک ارایه با شرطی که گذاشتی هست
+ }
+ const testinnerFunc=(value,index,array)=>{
+    return value>18
+ }
+
+//  reduce() یک عملیاتی رو روی ارایه انجام میده و یک ارایه واحد ایجاد میکنه و تاثیری رو ارایه اصلی نداره
+// از چپ به راست جستسجو رو انجام میده  
+// میتونه مقدار اولیه هعمم بگیره 
+const reduceTest=()=>{
+    const nums=[45,4,9,16,25];
+    let sum = nums.reduceRight(reduceInnerFunc,100);
+    console.log(sum);
+}
+const reduceInnerFunc=(total,value,index,array)=>{
+    return total + value
+}
+
+// reduceRight() تفاوتش اینه که از راست به چپ روی ارایه عملیات انجام میده
+
+
+// چطوری یک ارایه رو از کوچک به بزرگ یا بزرگ به کوچک مرتب کنم؟
+
+const sortedArrayFunc=()=>{
+    let baseArray= [82,30,50,40,60];
+    // let sortedarray1= baseArray.sort((a,b)=> a - b) //از کوچک به بزرگ
+    let sortedarra2= baseArray.sort((a,b)=> b - a) //از بزرگ به کوچک
+    console.log(sortedarra2);
+    // console.log(sortedarra2);
+}
+
+// every() یک تستی روی ارایه انجام میده و خروجی بولین میده
+
+const testEvery=()=>{
+    const nums= [45,4,9,16,25];
+    let allOverr18= nums.every(innertFuncEverey)
+    console.log(allOverr18)//false
+}
+
+const innertFuncEverey=(value,index,array)=>{
+    return value>18
+}
+
+// some() یه تستی رو روی ارایه انجام میده و بعضی از ایتم ها اگر تست رو رد کنن جوابش بر حسب اونه
+ const testSome=()=>{
+    const nums= [45,4,9,16,25];
+    let someOver18= nums.some(someInnerFun)
+    console.log(someOver18)//true
+ }
+ const someInnerFun=(value,index,array)=>{
+    return value>18
+ }
+
+//  Array.from()
+const makeArray=()=>{
+    let newArr= Array.from("3edfgthkjkSDF");
+    console.log(newArr)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
