@@ -1336,6 +1336,151 @@ const makeArray=()=>{
     let newArr= Array.from("3edfgthkjkSDF");
     console.log(newArr)
 }
+// Arrayname.keys()
+const ArrKey=()=>{
+    const comments=["cmnt1","cmnt2","cmnt3","cmnt4"];
+    const mykeys= comments.keys();
+    console.log(mykeys);
+    let text= "";
+    for(let x of mykeys){
+        text += x + "" //=> text= x+"and"
+        console.log(text)
+    }
+}
+
+// entries() کلید و ولیو هارو برمیگردونه
+const entriesSample=()=>{
+    const comments=["cmnt1","cmnt2","cmnt3","cmnt4"];
+    const entriesİterator= comments.entries();//[key(index),value]
+    console.log(entriesİterator);
+    for(let x of entriesİterator){
+        console.log(x)
+    }
+}
+
+// with(index,new item) ES2023 یک مقدار جدید به ارایه اصلی اضافه میکنه جایگزین میکنه طول ارای عوض نمیشه
+
+const withSample=()=>{
+    const comments=["cmnt1","cmnt2","cmnt3","cmnt4"];
+    const mycomments= comments.with(2,"perfect");
+    console.log(mycomments);
+}
+
+// spread() یک متد نیست یک مفهوم روی آرایه هاس 
+/// ... به سه نقطه میگن 
+const spreadOfArr=()=>{
+    const q1= ["jan","feb","mar"]
+    const q2= ["apr","may","jun"]
+    const q3= ["jul","aug","sep"]
+    const q4= ["oct","nov","may"]
+    const year= [...q1, ...q2, ...q3,...q4];// به ادامه ارایه قبلی ارایه بعدی رو اضافه میکنه
+    console.log(year)
+}
+
+// Math.random() عدد رندوم بین صفر تا یک 
+const CreateRandomNum=()=>{
+    let num1= Math.random();
+    // console.log(num1)
+    let num2= Math.random()*10
+    // console.log(num2)
+    let num3 =Math.random()*11
+    // console.log(num3)
+    let num4= (Math.random()*100)+1+"qasdffjlj"
+    console.log(num4)
+    
+}
+
+//Boolean() تبدیل به نوع داده ی بولین میکنه
+const changeToBoolean=()=>{
+    let x1= 0;
+   let result1= Boolean(x1)
+//    console.log(result1) //false
+
+   let x2 = 1;
+   let result2= Boolean(x2);
+//    console.log(result2) //true
+
+   let x3= -0;
+   let result3= Boolean(x3)
+//    console.log(result3) //false
+
+    let x4= null
+    let result4= Boolean(x4)
+    // console.log(result4) //false
+
+    let x5= "false"
+    let result5= Boolean(x5)
+    // console.log(result5) //true چرا چون داخل استرینگم خالی نیست
+
+
+    let x6= ""
+    let result6= Boolean(x6)
+    // console.log(result6) //false چرا چون داخل استرینگم خالی هست
+
+
+    let x7= 10 /"hi"
+    let result7= Boolean(x7)
+    console.log(result7) // false
+
+
+}
+
+// یه مثال 
+const alertMyAge=(age)=>{
+    let alertValeu=(age < 18 ) ? "too younge" : "not too younge"
+    alert(alertValeu)
+    console.log(alertValeu)
+}
+
+// Nullish coasting operator ?? 
+// اولین آرگیومنت رو برمیگردونه اگر اون آرگیومنت 
+// null یا undefined
+// نباشه 
+
+const testNullish=()=>{
+    let name = undefined;
+    let text = "thats possible";
+    let result = name ?? text;
+    console.log(result);
+}
+
+// if else 
+const ifElse=(age)=>{
+    // let alertValeu=(age < 18 ) ? "too younge" : "not too younge"
+    let alertV;
+    if (age <18){
+        alertV= "too younge"
+    }else if(age >= 18 && age < 25 ) {
+        alertV= "younge"
+    }else {
+        alertV= "not too younge"
+    }
+    alert(alertV)
+    console.log(alertV)
+}
+
+// switch case 
+const dayOfWeek=(input)=>{
+    let day ;
+    switch (input) {
+        case 0:
+            day = "شنبه"
+            break;
+        case 1:
+            day ="یکشنبه"
+            break;
+        case 2:
+            day= "دوشنبه"
+            break;
+    
+        default:
+    console.log(" day not found")
+            break;
+    }
+    console.log(day)
+}
+
+// while and do while 
 
 
 
