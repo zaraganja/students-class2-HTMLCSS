@@ -1481,6 +1481,133 @@ const dayOfWeek=(input)=>{
 }
 
 // while and do while 
+const testWhile=()=>{
+    let i=0;
+    while(i<5){
+        console.log("i is lower than 5 and i is :"+i);
+        i++ // i= i+1
+    }
+
+}
+
+// ******************JS destructuring ******** 
+// unpack array [] and objects {}
+
+const destructTest=()=>{
+    const person ={
+        firstname:"zara",
+        lastname:"ganji",
+        age: 32
+    }
+    // Destructuring
+    // let {firstname}= person;
+    //  console.log(firstname);
+    //  alert(lastname);
+
+    //  let {age}=person;
+    //  document.getElementById("text").innerText=age;
+     let {lastname,age:birthday}=person;
+     console.log(birthday +"and"+lastname);
+
+}
+
+// array destructuring 
+const arrayDestruct=()=>{
+    const fruites= ["Banana","Orange","Apple","Mango","Kiwi"];
+    // Destructuring
+    let [fruit1,fruit2, ,a,b]=fruites;
+    // console.log(fruit1);
+    // console.log(fruit2);
+    // console.log(a);
+    // console.log(b);
+
+    let [f1,f2,...u]=fruites;
+    console.log(u);
+}
+
+// ******JS Errors ******error handling
+const sendDataToServer =()=>{
+    try {
+        throw "خطا در ارتباط با سرور";// برای ایجاد ارور اگه بخوای خودت ارور ایجاد کنی 
+        const name="shiva";
+        const code= "1234";
+        console.log("send data to server:"+name + code);
+        
+    } catch (error) {
+        alert(":خطایی رخ داد"+error)
+    }
+}
+
+// ************************************ JS Module-> import ->react-next-react-native
+
+
+// ********setTimeout={} - setInterval 
+
+const setTimeoutTest=()=>{
+
+// بعد از شش ثانیه لاگ رو فقط یکبار اجرا میکنه 
+    setTimeout(() => {
+        console.log("inside settimeout");
+    
+    }, 6000);
+}
+
+const setİntervalTest=()=>{
+    // هر سه ثانیه یبار اجرا میکنه
+    setInterval(() => {
+        console.log("hi students")
+    }, 3000);
+}
+
+// *********js Promise()***** "I promise a Result!"
+
+// کدی که ممکنه اجراش طول بکشه و برای یک خروجی منتظره از پرامیس استفاده میکنه
+// در گرفتن داده از سرور استفاده میشه 
+const getDataWithPromise=(url)=>{
+    return new Promise((resolve,reject)=>{
+        fetch(url).then((response)=>{
+            if(!response){
+                // reject("http error !"+response.status)
+                reject(`http error! ${response.status}`)
+                
+            }else{
+                return response.json();
+            }
+        }).then((data)=> resolve(data)).catch((error)=>{
+            reject(`network error : ${error}`)
+        })
+    })
+}
+
+const getData=()=>{
+    getDataWithPromise('https://jsonplaceholder.typicode.com/posts/1').then((data)=>{
+        console.log("داده ای که از سرور گرفتم"+data.title)
+    }).catch((error)=>{
+        console.log("خطایی رخ داد"+error)
+    })
+}
+
+// ****** asyc await ***** اگر تابع از این نوع باشه یک پرامیس برمیگرده
+//  باعث میشه تابع به صورت سینک یعنی هماهنگ اجرا بشه به این صورت که تا یک عملیاتی انام نشده تموم نشده بعدیه اجرا نشه
+//  مثلا قبا از گرفتن داده از سرور نیاد جوابو از سرور نمایش بده 
+
+const getmyData= async()=>{
+    await fetch("https://jsonplaceholder.typicode.com/posts/1").then(response=>{
+        console.log (response)
+    }).catch((err)=>{
+        console.log(err)
+        alert(err)
+    })
+}
+
+// ********** cookies ********* 
+// name-value 
+// document.cookie="username=zohre ; time= 18dec" 
+
+
+
+
+
 
 
 
